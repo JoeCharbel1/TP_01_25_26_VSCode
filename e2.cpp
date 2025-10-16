@@ -20,7 +20,7 @@ int getInt(int intInf, int intSup)
     }while(bornInf||bornSup);
     return n;
 }
-int main()
+int main_e2()
 {
     cout<<"Enter the integer for which you want to display the multiplication table"<<endl;
     int n;

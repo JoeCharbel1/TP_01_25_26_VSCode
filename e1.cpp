@@ -13,7 +13,7 @@ void UpdateGrade(student& A, double grade)
     A.grade=grade;
 }
 
-int main(){
+int main_e1(){
     student students[3]={ {"Alice", 20, 88.5},{"Bob", 22, 92.0},{"Charlie",19 ,85.0}};
     cout<<"Alice Grade is "<<students[0].grade<<endl;
     cout<<"Bob Grade is "<<students[1].grade<<endl;
