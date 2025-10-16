@@ -1,27 +1,34 @@
 #include <iostream>
 using namespace std;
 
-#include <iostream>
-using namespace std;
-int main(){
+int getInt(int intInf, int intSup)
+{
     int n;
     bool bornSup;
     bool bornInf;
     do{
-    cout<<"Enter a positive integer less than 70: "<<endl;
+    cout<<"Enter an integer greater than "<< intInf <<" and less than"<< intSup <<" "<<endl;
     cin>>n;
-    bornSup=n>=70;
-    bornInf=n<=0;
-    if (bornInf){
-        cout << "Your number is less than or equal to 0!"<<endl;
+    bornSup=n>=intSup;
+    bornInf=n<=intInf;
+    if(bornInf){
+    cout<<"Your number is less than or equal to "<< bornInf<<endl;
     }
-    if (bornSup){
-        cout<<"Your number is greater than or equal to 70"<<endl;
+    if(bornSup) {
+        cout<<"Your number is greater than or equal "<< bornSup<<endl;
     }
-    }while (bornInf || bornSup);
-    for(int i=10; i>=0; i--)
-    {
-    cout<<n<<"x"<<i<<"="<<n*i<<endl;
+    }while(bornInf||bornSup);
+    return n;
+}
+int main()
+{
+    cout<<"Enter the integer for which you want to display the multiplication table"<<endl;
+    int n;
+    n=getInt(0,70);
+    int bornMultSup=getInt(8,30);
+    int bornMultInf=getInt(0,8);
+    for(int i=bornMultSup; i>=bornMultInf; i--){
+        cout<<n<<"x"<<i<<"="<<n*i<<endl;
     }
     return 0;
 }
