@@ -29,12 +29,6 @@ double sqrt_newton(double n) {
     return x;
 }
 
-double distance(double x1, double y1, double x2, double y2) {
-    double dx = x2 - x1;
-    double dy = y2 - y1;
-    return sqrt_newton(dx*dx + dy*dy);
-}
-
 // Demonstrate some basic assertions.
 TEST(Ex3, TestDistance) {
 // Expect equality.
